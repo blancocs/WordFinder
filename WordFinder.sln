@@ -5,6 +5,16 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordFinder", "WordFinder\WordFinder.csproj", "{CAA302F5-E099-4ED9-A232-4748CB733975}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7DA2DA24-2C04-4A61-85F7-D68B1B3B989D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{2C317CF7-996C-48BD-A957-4A9CF327C32B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordFinder.Application", "WordFinder.Application\WordFinder.Application.csproj", "{2005B2AB-980F-4ECC-98A5-353518453426}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{DF3ACAA5-3DE0-423E-A7DD-2A983D918AB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordFinder.infrastructure", "WordFinder.infrastructure\WordFinder.infrastructure.csproj", "{0EE408F7-7D53-4FD3-9895-5E6FC24DD784}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +25,23 @@ Global
 		{CAA302F5-E099-4ED9-A232-4748CB733975}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAA302F5-E099-4ED9-A232-4748CB733975}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAA302F5-E099-4ED9-A232-4748CB733975}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2005B2AB-980F-4ECC-98A5-353518453426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2005B2AB-980F-4ECC-98A5-353518453426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2005B2AB-980F-4ECC-98A5-353518453426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2005B2AB-980F-4ECC-98A5-353518453426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EE408F7-7D53-4FD3-9895-5E6FC24DD784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE408F7-7D53-4FD3-9895-5E6FC24DD784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE408F7-7D53-4FD3-9895-5E6FC24DD784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE408F7-7D53-4FD3-9895-5E6FC24DD784}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2C317CF7-996C-48BD-A957-4A9CF327C32B} = {7DA2DA24-2C04-4A61-85F7-D68B1B3B989D}
+		{2005B2AB-980F-4ECC-98A5-353518453426} = {2C317CF7-996C-48BD-A957-4A9CF327C32B}
+		{DF3ACAA5-3DE0-423E-A7DD-2A983D918AB7} = {7DA2DA24-2C04-4A61-85F7-D68B1B3B989D}
+		{0EE408F7-7D53-4FD3-9895-5E6FC24DD784} = {DF3ACAA5-3DE0-423E-A7DD-2A983D918AB7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF5CD7AB-2CAB-4D96-A597-71C87607E703}
