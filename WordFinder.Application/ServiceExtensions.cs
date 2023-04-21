@@ -1,15 +1,11 @@
 ﻿using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using WordFinder.Application.Behaviours;
 using WordFinder.Application.Interfaces;
 using WordFinder.Application.Services;
+using FluentValidation.AspNetCore;
 
 namespace WordFinder.Application
 {
@@ -18,6 +14,7 @@ namespace WordFinder.Application
         public static void AddApplicationLayer(this IServiceCollection services)
         {
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            services.AddFluentValidationAutoValidation();
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddScoped<IWordsFinder, WordsFinder>();
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));

@@ -18,7 +18,7 @@ namespace WordFinder.infrastructure.Helpers
             {
                 for (var j = 0; j < numCols; j++)
                 {
-                    result[i, j] = matrix.ElementAt(i)[j];
+                    result[i, j] = matrix.ElementAt(i).ToLower()[j];
                 }
             }
 

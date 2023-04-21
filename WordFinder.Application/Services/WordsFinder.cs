@@ -23,7 +23,8 @@ namespace WordFinder.Application.Services
 
         public async Task<IEnumerable<string>> Find(IEnumerable<string> wordStream)
         {
-            this._trie = new Trie(wordStream);
+            //changing all words to lower case.
+            this._trie = new Trie(wordStream.Select(x=>x.ToLower()).ToList());
 
             var foundWords = new Dictionary<string, int>();
 
@@ -78,26 +79,7 @@ namespace WordFinder.Application.Services
             }
         }
 
-        private bool SearchWordInMatrix(string[] matrix, string word, int startRow, int startCol, int dx, int dy)
-        {
-            int wordLength = word.Length;
-            int numRows = matrix.Length;
-            int numCols = matrix[0].Length;
-
-            for (int i = 0; i < wordLength; i++)
-            {
-                int row = startRow + i * dy;
-                int col = startCol + i * dx;
-
-                if (row < 0 || row >= numRows || col < 0 || col >= numCols || matrix[row][col] != word[i])
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        private List<(int dx, int dy)> GetSearchDirections()
+         private List<(int dx, int dy)> GetSearchDirections()
         {
             List<(int dx, int dy)> directions = new List<(int dx, int dy)>
             {

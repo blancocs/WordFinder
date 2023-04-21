@@ -19,12 +19,11 @@ namespace WordFinder.Application.Features.FindWords.Queries
         public class FindWordsQueryHandler : IRequestHandler<FindWordsQuery, WordFinderResponseDTO>
         {
             private readonly IMapper _mapper;
-            //private readonly IWordsFinder _wordsFinder;
-
-            public FindWordsQueryHandler(IMapper mapper) //, IWordsFinder wordFinder)
+            
+            public FindWordsQueryHandler(IMapper mapper) 
             {
                 _mapper = mapper;
-                //_wordsFinder = wordFinder;
+
             }
 
             public async Task<WordFinderResponseDTO> Handle(FindWordsQuery request, CancellationToken cancellationToken)
