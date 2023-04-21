@@ -27,7 +27,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WordFinder.Application\WordFinder.Application.csproj" />
-    <ProjectReference Include="..\WordFinder\WordFinder.csproj" />
   </ItemGroup>
 
 </Project>

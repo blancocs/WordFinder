@@ -79,5 +79,20 @@ namespace WordFinder.XUnitTests.Features.FindWords.Queries
 
 
         }
+
+        [Fact]
+        public async Task FindWord_should_return_Exception()
+        {
+            var wordstream = new List<String>() { "estanolaencontras", "nichance" };
+            var findWordsQuery = new FindWordsQuery { Matrix = null, WordStream = wordstream };
+
+            //act 
+            await Assert.ThrowsAsync<ArgumentNullException>(() => Task.Run(() =>  _queryHandler.Handle(findWordsQuery, default)));
+
+
+            
+
+
+        }
     }
-    }
+}

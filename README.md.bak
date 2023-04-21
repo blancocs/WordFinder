@@ -8,9 +8,9 @@ aho-corasick.
 After some examples i found some libreries to implement this algorithm, i didn't want to use them, so i took a look on their github repositories to understand them better.
 i was able to understood it and implement the structure of the classes i was needing.
 
-after creating some test cases to valid the happy path, i added differents validation rules using FluentValidation.
+after creating some test cases to valid the happy path, i add differents validation rules using FluentValidation.
 
-Finally, i've included multitask using task library, and using ConcurrentDictionary to prevent concurrency problems when wanting to save or increment repeated words.
+Finally, i've added multitask using task library, and using ConcurrentDictionary to prevent concurrency problems when wanting to save or increment repeated words.
 
 
 To solved this challange i tried to use:

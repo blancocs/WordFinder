@@ -6,9 +6,11 @@ using WordFinder.Application.Behaviours;
 using WordFinder.Application.Interfaces;
 using WordFinder.Application.Services;
 using FluentValidation.AspNetCore;
+using System.Diagnostics.CodeAnalysis;
 
 namespace WordFinder.Application
 {
+    [ExcludeFromCodeCoverage]
     public static class ServiceExtensions
     {
         public static void AddApplicationLayer(this IServiceCollection services)

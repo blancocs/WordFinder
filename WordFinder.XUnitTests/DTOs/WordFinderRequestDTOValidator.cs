@@ -42,7 +42,7 @@ namespace WordFinder.XUnitTests.DTOs
 
             result.ShouldHaveValidationErrorFor(x => x.Matrix);
 
-            result.ToString().Should().Contain("empty strings");
+            result.ToString().Should().Contain("empty values");
 
         }
 
